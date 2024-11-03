@@ -1,4 +1,4 @@
-
+/* Estilos generales */
 html, body {
     height: 100%;
     margin: 0;
@@ -6,22 +6,25 @@ html, body {
     font-family: Arial, sans-serif;
     overflow: hidden;
 }
+
+/* Imagen de fondo */
 body {
     background-image: url('/static/pipo.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-repeat: repeat;
 }
 
+/* Contenedor principal */
 .content {
     position: relative;
     z-index: 1;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
+    height: 100vh;
 }
 
-/* Contenedor de la superposición */
+/* Ajustes para el panel de texto */
 .overlay-content {
     width: 65%;
     height: 100vh;
@@ -30,37 +33,33 @@ body {
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    z-index: -1;
 }
 
-/* Estilo para el texto principal */
+/* Texto principal */
 .text-center {
     text-align: center;
     font-size: 4rem;
     font-weight: bold;
 }
 
-/* Contenedor para los botones alineados a la derecha */
+/* Panel de botones */
 .container-right {
-    position: relative;
     width: 35%;
-    justify-content: right;
-    background-color: rgba(0, 0, 0, 0.4); /* 0.4 es la transparencia */
+    background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* Botones */
 .button-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 150px;
     align-items: center;
 }
 
-/* Botón en forma de corazón */
 /* Botón en forma de corazón */
 .hearth {
     height: 150px;
@@ -72,57 +71,32 @@ body {
     animation: palpitar 0.5s linear infinite alternate;
     display: flex;
     justify-content: center;
-    align-items: top;
-    text-decoration: none; /* Quita el subrayado del enlace */
+    align-items: center;
+    text-decoration: none;
 }
 
 .heart-text {
-    transform: rotate(-45deg); /* Rota el texto de regreso a la posición correcta */
+    transform: rotate(-45deg);
     color: white;
     font-weight: bold;
     font-size: 2rem;
     text-align: center;
-    padding-top: 13%;
-    z-index: 1;
-}
-
-
-h1 {
-    color: white;}
-h2 {
-    color: white;
 }
 
 @keyframes palpitar {
-0%{transform: rotate(45deg) scale(1.10);}
-80%{transform: rotate(45deg) scale(1.0);}
-100%{transform: rotate(45deg) scale(0.8);}
+    0% { transform: rotate(45deg) scale(1.10); }
+    80% { transform: rotate(45deg) scale(1.0); }
+    100% { transform: rotate(45deg) scale(0.8); }
 }
 
-.hearth::before {
+.hearth::before, .hearth::after {
     content: "";
     position: absolute;
     height: 150px;
     width: 150px;
     background-color: red;
-    right: 50%;
     border-radius: 50%;
-    box-shadow: 20px 20px 150px #f20404;
-
 }
-
-.hearth::after {
-    content: "";
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    background-color: red;
-    top: -50%;
-    border-radius: 50%;
-    box-shadow: 20px 20px 150px #f20404;
-    
-}
-
 
 /* Botón normal */
 .normal-button {
@@ -130,10 +104,9 @@ h2 {
     color: white;
     font-weight: bold;
     font-size: 1.9rem;
-    text-align: center;
     padding: 15px 25px;
     text-decoration: none;
-    border-radius: 150px;
+    border-radius: 50px;
     width: 300px;
     transition: background-color 0.3s ease;
 }
@@ -156,28 +129,29 @@ h2 {
 
     /* Reduce el tamaño del texto principal */
     .text-center {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         padding: 20px;
     }
 
     /* Ajuste de los botones para pantallas pequeñas */
     .button-container {
-        gap: 20px;
+        gap: 30px;
     }
 
     /* Ajusta el tamaño del botón de corazón */
     .hearth {
-        height: 80px;
-        width: 80px;
+        height: 100px;
+        width: 100px;
     }
 
     .heart-text {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     /* Ajusta el tamaño del botón normal */
     .normal-button {
-        font-size: 1.2rem;
-        width: 200px;
+        font-size: 1.5rem;
+        width: 250px;
+        padding: 10px 20px;
     }
 }
