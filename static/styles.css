@@ -144,29 +144,40 @@ h2 {
 
 /* Media query para pantallas de menos de 768px (tablets y móviles) */
 @media (max-width: 768px) {
-    /* Cambia la dirección del contenedor a columna para apilar los elementos */
+    /* Cambia a columna para pantallas pequeñas */
     .content {
         flex-direction: column;
     }
 
-    /* Ajusta el ancho del contenedor de texto y botones al 100% */
+    /* Ajusta el ancho de los paneles */
     .overlay-content, .container-right {
         width: 100%;
     }
 
-    /* Reduce el tamaño de fuente para pantallas pequeñas */
+    /* Reduce el tamaño del texto principal */
     .text-center {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         padding: 20px;
     }
 
-    /* Ajuste de botones para que no queden tan separados en móvil */
+    /* Ajuste de los botones para pantallas pequeñas */
     .button-container {
-        gap: 15px;
+        gap: 20px;
     }
 
-    /* Margen adicional para el contenido en móvil */
-    .container-right {
-        padding: 20px;
+    /* Ajusta el tamaño del botón de corazón */
+    .hearth {
+        height: 80px;
+        width: 80px;
+    }
+
+    .heart-text {
+        font-size: 1rem;
+    }
+
+    /* Ajusta el tamaño del botón normal */
+    .normal-button {
+        font-size: 1.2rem;
+        width: 200px;
     }
 }
