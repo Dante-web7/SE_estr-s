@@ -102,5 +102,7 @@ def resultados():
     return render_template('resultados.html', puntaje_total=puntaje_total, nivel_estres=nivel_estres, recomendaciones=recomendaciones, nivel_clase=nivel_clase)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Obtener el puerto de la variable de entorno o usar 5000 por defecto
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
 
