@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porque Me Quiero</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="{{ url_for('static', filename='yoga.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+    <div class="content">
+        <!--Panel de INICIO-->
+        <div class="overlay-content">
+            <div class="text-center">
+                <h1>PORQUE <br>ME <br>QUIERO :3</h1>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="button-container">
+                <a href="{{ url_for('iniciar_test') }}" class="hearth">
+                    <span class="heart-text">COMENZAR TEST</span>
+                </a>
+                <a href="#" class="normal-button">INICIAR SESIÓN</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    
