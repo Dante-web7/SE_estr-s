@@ -142,3 +142,31 @@ h2 {
     background-color: #009973;
 }
 
+/* Media query para pantallas de menos de 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    /* Cambia la dirección del contenedor a columna para apilar los elementos */
+    .content {
+        flex-direction: column;
+    }
+
+    /* Ajusta el ancho del contenedor de texto y botones al 100% */
+    .overlay-content, .container-right {
+        width: 100%;
+    }
+
+    /* Reduce el tamaño de fuente para pantallas pequeñas */
+    .text-center {
+        font-size: 2.5rem;
+        padding: 20px;
+    }
+
+    /* Ajuste de botones para que no queden tan separados en móvil */
+    .button-container {
+        gap: 15px;
+    }
+
+    /* Margen adicional para el contenido en móvil */
+    .container-right {
+        padding: 20px;
+    }
+}
